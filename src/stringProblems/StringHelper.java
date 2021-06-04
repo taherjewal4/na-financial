@@ -38,13 +38,12 @@ public class StringHelper {
      * @param str2
      * @return
      */
-    public static String getLongestMatchingSubstring(String str1, String str2) {
+    public static int getLongestMatchingSubstring(String str1, String str2) {
         int stringLength1 = str1.length();
         int stringLength2 = str2.length();
         int max = 0;
 
         int[][] axis = new int[stringLength1][stringLength2];
-        int endIndex = -1;
         for (int i = 0; i < stringLength1; i++) {
             for (int j = 0; j < stringLength2; j++) {
                 if (str1.charAt(i) == str2.charAt(j)) {
@@ -57,11 +56,10 @@ public class StringHelper {
 
                     if (max < axis[i][j]) {
                         max = axis[i][j];
-                        endIndex = i;
                     }
                 }
             }
         }
-        return str1.substring(endIndex - max + 1, endIndex + 1);
+        return max;
     }
 }
