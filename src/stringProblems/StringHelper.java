@@ -7,7 +7,7 @@ public class StringHelper {
 
         System.out.println(isSharedSubstring("art", "ammo"));
         System.out.println(isSharedSubstring("be", "cat"));
-        System.out.println(getLongestMatchingSubstring("wonderful", "fulsome"));
+        System.out.println(getLongestMatchingSubstringLength("wonderful", "fulsome"));
     }
 
     /**
@@ -38,7 +38,7 @@ public class StringHelper {
      * @param str2
      * @return
      */
-    public static int getLongestMatchingSubstring(String str1, String str2) {
+    public static int getLongestMatchingSubstringLength(String str1, String str2) {
         int stringLength1 = str1.length();
         int stringLength2 = str2.length();
         int max = 0;
